@@ -34,9 +34,9 @@ ARG VERSION
 LABEL org.opencontainers.image.authors="Koen Kanters"
 LABEL org.opencontainers.image.title="Zigbee2MQTT"
 LABEL org.opencontainers.image.description="Zigbee to MQTT bridge using Zigbee-herdsman"
-LABEL org.opencontainers.image.url="https://github.com/Koenkk/zigbee2mqtt"
+LABEL org.opencontainers.image.url="https://github.com/wchy1128/zigbee2mqtt"
 LABEL org.opencontainers.image.documentation="https://www.zigbee2mqtt.io/"
-LABEL org.opencontainers.image.source="https://github.com/Koenkk/zigbee2mqtt"
+LABEL org.opencontainers.image.source="https://github.com/wchy1128/zigbee2mqtt"
 LABEL org.opencontainers.image.licenses="GPL-3.0"
 LABEL org.opencontainers.image.created=${DATE}
 LABEL org.opencontainers.image.version=${VERSION}
@@ -54,4 +54,4 @@ ARG COMMIT
 RUN echo "$COMMIT" > dist/.hash
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD [ "/sbin/tini", "--", "node", "index.js"]
+CMD [ "/bin/bash"]
